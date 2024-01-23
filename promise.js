@@ -1,4 +1,4 @@
-function isAuthenticated() {
+/*function isAuthenticated() {
     return Math.random() > 1;
   }
   function Login() {
@@ -18,4 +18,39 @@ function isAuthenticated() {
     })
     .catch(function (message) {
       console.log(message);
-    });
+    });*/
+
+  //promise 
+  function isLocationValid(Loc) {
+    var v = "Melbourne"
+    if (v === "valid") {
+      return true
+    }
+    else {
+      return false
+    }
+  }
+  function location() {
+    return new Promise(function(response, errorMsg){
+      setTimeout(function () {
+        Loc = "Melbourne"
+        console.log("The location is",Loc)
+        if(isLocationValid) {
+          return response("Location Found")
+        }
+        else {
+          return errorMsg("Location not Found ")
+        }
+      },2000)
+  
+  })
+  
+  }
+  location()
+    .then(function(response) {
+        console.log(response);
+    })
+    .catch(function(response){
+      console.log(response);
+    });
+  
