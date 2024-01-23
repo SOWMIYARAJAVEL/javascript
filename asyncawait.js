@@ -39,7 +39,7 @@ async function post() {
                 postresponse("This is my first post")
             }, 3000)
         });
-    .thenvar [feed, like, comment] = await Promise.all([post, likecode(), commentcode()])
+    var [feed, like, comment] = await Promise.all([post, likecode(), commentcode()])
     console.log(feed);
     console.log(like);
     console.log(comment)
