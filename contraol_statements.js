@@ -82,20 +82,27 @@ kongu["fees"]=125000
 kongu["food"]="pretty decent"
 kongu["hostel count"]=10
 kongu["overall"]="very worst"
-console.log(kongu)
+//console.log(kongu)
 //for in ex =>output=key
 for (key in kongu)
 {
-    console.log(key,kongu[key])
+    //console.log(key,kongu[key])
 
 }
-
+kongu=Object.entries(kongu)
+//console.log(kongu)
 //for each ex 
-kongu.forEach((key,element )=>
+kongu.forEach(([key,element] )=>
 {
-    console.log(key,element)
+    console.log(key,":",element)
 
 });
+//for of
+
+for ([key,value] of kongu){
+    console.log(key)
+}
+
 
 
 
